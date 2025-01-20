@@ -34,6 +34,9 @@ def fade_in():
         time.sleep(wait_time)
         play_obj.set_volume(counter)
 
+def stop():
+    play_obj.stop()
+
 def play_song(songLocation):
     time.sleep(1)
     if play_obj.active:
@@ -62,8 +65,14 @@ btnBrideWalkIn.pack(pady=12)
 btnEndOfCeremony = tk.Button(root,text="End of Ceremony",command=end_of_ceremony,height=3,width=25,font=helvFnt)
 btnEndOfCeremony.pack(pady=12)
 
-btnFadeOut = tk.Button(root,text="Fade Out",command=fade_out,height=3,width=25,font=helvFnt,bg="#E97451")
-btnFadeOut.pack(pady=12)
+frameStop = tk.Frame(root,height=3,width=25)
+frameStop.pack(pady=12)
+
+btnFadeOut = tk.Button(frameStop,text="Fade Out",command=fade_out,height=3,width=19,font=helvFnt,bg="#E97451")
+btnFadeOut.grid(row=0,column=0)
+
+btnFadeOut = tk.Button(frameStop,text="STOP",command=stop,height=3,width=6,font=helvFnt,bg="#E97451")
+btnFadeOut.grid(row=0,column=1)
 
 # Start the event loop.
 root.mainloop()
