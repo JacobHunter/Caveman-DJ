@@ -1,5 +1,8 @@
 A simple Python program to "DJ" a wedding Ceremony. Features automatic "Fade In" and "Fade Out".
 
+REQUIREMENTS:
+Just Playback Python Library: https://github.com/cheofusi/just_playback
+
 HOW TO USE:
 Click a button at any time during the ceremony, to fade out what is actively playing and fade in the next song. Or click "Fade Out" to fade out and stop the music.
 
